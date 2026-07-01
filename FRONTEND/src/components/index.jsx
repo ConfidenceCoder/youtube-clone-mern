@@ -3,4 +3,4 @@ export { GoogleSignInButton } from './GoogleSignInButton';
 export {NavBar} from './NavBar'
 export {Card} from './Card'
 export { Comment } from './Comment';
-export{ Upload } from './upload';
+export{ Upload } from './Upload';

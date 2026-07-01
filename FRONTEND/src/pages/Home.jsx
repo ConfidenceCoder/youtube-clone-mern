@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card } from '../components/index';
+import { API_URLS } from '../config/api';
 
 export const Home = ({refreshTrigger}) => {
   const [videoData, setVideoData] = useState([]);
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const res = await axios.get('http://localhost:8080/api/videos/random');
+        const res = await axios.get(`${API_URLS.VIDEOS}/random`);
         setVideoData(res.data);
       } catch (err) {
         console.error("video fetch error:", err);

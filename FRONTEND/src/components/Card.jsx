@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { formatRelativeTime } from '../config/Utils'
-
+import { API_URLS } from '../config/api';
 export const Card = ({ video }) => {
   const [channel, setChannel] = useState({});
 
@@ -11,7 +11,7 @@ export const Card = ({ video }) => {
   useEffect(() => {
     const fetchChannel = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/api/users/find/${video.userId}`);
+        const res = await axios.get(`${API_URLS.USERS}/find/${video.userId}`);
         setChannel(res.data);
       } catch (err) {
         console.error("channel fetch error", err);

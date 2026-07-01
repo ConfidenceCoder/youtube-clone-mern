@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Menu, NavBar,Upload } from './components/index';
 import { AllRoutes } from './router/AllRoutes';
 
+
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUploadOpen, setIsUploadOpen] = useState(false);

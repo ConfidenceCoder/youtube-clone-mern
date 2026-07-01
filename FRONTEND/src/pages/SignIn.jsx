@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { GoogleSignInButton } from '../components/GoogleSignInButton';
+import { GoogleSignInButton } from '../components/index';
 import { loginStart, loginFailure, loginSuccess } from '../redux/useSlice';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch,useSelector } from 'react-redux';

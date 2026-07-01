@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route,Routes } from 'react-router-dom';
-import { SignIn,Home,Video } from '../pages/index.jsx';
+import { SignIn,Home,Video } from '../pages/index';
 
 export const AllRoutes = ({ refreshTrigger}) => {
   return (

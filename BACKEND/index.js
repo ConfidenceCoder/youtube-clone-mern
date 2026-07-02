@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: "https://youtube-clone-mern-ochre.vercel.app",
+  origin: "https://youtube-clone-mern-seven.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));

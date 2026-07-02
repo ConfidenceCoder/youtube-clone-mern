@@ -53,7 +53,10 @@ export const NavBar = ({ toggleMenu, setIsUploadOpen }) => {
       <div className="flex items-center justify-end flex-shrink-0 relative">
         {!currentUser ? (
           <Link to="/signin" className="text-decoration-none">
-            <button className="flex items-center gap-1 md:gap-2 border border-blue-500 text-blue-500 font-semibold px-2 md:px-4 py-1 md:py-1.5 rounded-full hover:bg-blue-500 hover:text-white transition-colors text-xs md:text-base">
+            <button className="flex items-center gap-1 md:gap-2 border border-blue-500 text-blue-500 font-semibold px-2 md:px-4 py-1.5 rounded-full hover:bg-blue-500 hover:text-white transition-colors text-xs md:text-base">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
               <span className="hidden sm:block">SIGNIN</span>
             </button>
           </Link>

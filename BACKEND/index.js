@@ -7,10 +7,13 @@ import cookieParser from 'cookie-parser';
 
 const app = express();
 app.use(express.json());
+
 app.use(cors({
-    origin: true, 
-    credentials: true
+  origin: "https://youtube-clone-mern-ochre.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
 }));
+
 app.use(cookieParser())
 
 app.use("/api/auth",authRouter);

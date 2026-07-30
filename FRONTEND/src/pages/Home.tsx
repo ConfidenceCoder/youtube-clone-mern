@@ -1,0 +1,32 @@
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { Card } from '../components/index';
+import { API_URLS } from '../config/api';
+import { videoType } from '../types';
+  interface HomeProps {
+    refreshTrigger?:boolean;
+  }
+
+
+export const Home: React.FC<HomeProps> = ({refreshTrigger}) => {
+  const [videoData, setVideoData] = useState<videoType[]>([]);
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        const res = await axios.get(`${API_URLS.VIDEOS}/random`);
+        setVideoData(res.data);
+      } catch (err) {
+        console.error("video fetch error:", err);
+      }
+    };
+    fetchVideos();
+  }, [refreshTrigger]);
+
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-5 gap-y-9 p-4 sm:p-6">
+      {videoData.map((video) => (
+        <Card key={video._id} video={video} />
+      ))}
+    </div>
+  );
+};

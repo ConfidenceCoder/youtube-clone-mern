@@ -26,10 +26,11 @@ app.use("/api/users", userRouter);
 app.use("/api/videos",videoRouter);
 app.use("/api/comments",commentRouter)
 
-app.listen(process.env.PORT,()=>{
-    connectdb();
-    console.log(`server is running on port ${process.env.PORT}`)
+const PORT = process.env.PORT || 8080;
 
+app.listen(PORT, () => {
+    connectdb();
+    console.log(`server is running on port ${PORT}`)
 })
 
 app.use((error:any,req:Request,res:Response,next:NextFunction)=>{

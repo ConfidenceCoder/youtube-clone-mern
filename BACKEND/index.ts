@@ -13,8 +13,7 @@ app.use(cors({
   origin:[
     "http://localhost:5173",
     "https://youtube-clone-mern-ochre.vercel.app",
-    "https://youtube-clone-mern-dptpy9yaq-confidencecoder1.vercel.app/"
-
+    "https://youtube-clone-mern-new.vercel.app/"
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
